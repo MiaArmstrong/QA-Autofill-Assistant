@@ -1,0 +1,34 @@
+name: Build and Zip Extension
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Extension
+        run: npm run build
+
+      - name: Zip Extension
+        run: zip -r qa-autofill-extension.zip manifest.json background.js content.js popup.js popup.html highlight.css icon.png faker-bundle.js
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: qa-autofill-extension
+          path: qa-autofill-extension.zip

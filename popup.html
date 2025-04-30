@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: sans-serif; padding: 10px; width: 200px; }
+    select, button, label { margin-top: 10px; width: 100%; }
+  </style>
+</head>
+<body>
+  <h3>Choose Test Data</h3>
+  <label>
+    <input type="checkbox" id="enableToggle"> Extension Enabled
+  </label>
+  <select id="typeSelect">
+    <option value="firstName">First Name</option>
+    <option value="lastName">Last Name</option>
+    <option value="email">Email</option>
+    <option value="username">Username</option>
+    <option value="company">Company</option>
+    <option value="tenDigitPhone">10-digit Phone</option>
+    <option value="address">Address</option>
+    <option value="city">City</option>
+    <option value="stateAbbr">State abb.</option>
+    <option value="month">MM Month</option>
+    <option value="year">YY Year</option>
+    <option value="vin">VIN</option>
+    <option value="plate">License Plate</option>
+    <option value="tireSize">Tire Size</option>
+    <option value="treadDepth">Tread Depth</option>
+    <option value="speedRating">Speed Rating</option>
+    <option value="loadRating">Load Rating</option>
+    <option value="tirePressurePsi">Tire Pressure PSI In</option>
+    <option value="brakePadsMm">Brake Pads MM</option>
+    <option value="rotorMeas">Rotor Meas. Thousandths</option>
+    <option value="discardSpec">Discard Spec</option>
+    <option value="wheelTorque">Wheel Torque ft.lbs.</option>
+    <option value="tireDot">Tire DOT (last 4)</option>
+  </select>
+  <button id="fill">Fill Field</button>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.qa-highlight {
+    outline: 2px solid limegreen !important;
+    box-shadow: 0 0 4px 2px rgba(50, 205, 50, 0.5);
+    border-radius: 4px;
+  }

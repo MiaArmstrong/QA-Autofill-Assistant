@@ -1,0 +1,13 @@
+{
+  "name": "qa-autofill-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension for QA engineers to autofill test data using faker.",
+  "scripts": {
+    "prebuild": "node scripts/sync-version.js",
+    "build": "esbuild src/faker-entry.js --bundle --format=iife --outfile=faker-bundle.js"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.7.0",
+    "esbuild": "^0.20.0"
+  }
+}
